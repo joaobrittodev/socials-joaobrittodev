@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #010101;
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-size: 200%;
+    background-position: center;
+    background-image: url(Images/image5.jpg);
+}
+
+.card {
+    background-color: rgba(12, 12, 12, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    width: 100vw;
+    height: 110vh;
+    text-align: center;
+    color: white;
+    backdrop-filter: blur(10px);
+}
+
+.profile {
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+h1 {
+    margin: 10px 0 0 0;
+    font-size: 24px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-link {
+    text-decoration: none; /* Remove underline from links */
+}
+
+.contact-item {
+    border-radius: 10px;
+    padding: 20px;
+    margin: 7px 0 ;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    transform: scale(1); /* Ensure the default scale is 1 */
+    color: white; /* Ensure text color is white */
+}
+
+.contact-item:hover {
+    box-shadow: 20px 20px 30px rgba(99, 96, 96, 0.2);
+    transform: scale(1.04); /* Scale up when hovered */
+}
+
+
+.icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+#icon {
+    margin-left: 20px; /* Adjust this value as needed */
+}
+
+.contact-item span {
+    flex: 0.95; /* Make the text span take up remaining space */
+    text-align: center; /* Center the text within the span */
+font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    .contact-item {
+        width: 50%; /* Set the width to 50% for larger screens */
+        margin-left: auto; /* Center the items horizontally */
+        margin-right: auto; /* Center the items horizontally */
+    }
+    
+}/* Loading Screen */
+#loading-screen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.411);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    backdrop-filter: blur(30px);
+}
+
+.loader {
+    height: 15px;
+    aspect-ratio: 4;
+    --_g: no-repeat radial-gradient(farthest-side,#fefefe 90%,#ffffff00);
+    background: 
+      var(--_g) left, 
+      var(--_g) right;
+    background-size: 25% 100%;
+    display: grid;
+  }
+  .loader:before,
+  .loader:after {
+    content: "";
+    height: inherit;
+    aspect-ratio: 1;
+    grid-area: 1/1;
+    margin: auto;
+    border-radius: 50%;
+    transform-origin: -100% 50%;
+    background: #edeced;
+    animation: l49 1s infinite linear;
+  }
+  .loader:after {
+    transform-origin: 200% 50%;
+    --s:-1;
+    animation-delay: -.5s;
+  }
+  
+  @keyframes l49 {
+    58%,
+    100% {transform: rotate(calc(var(--s,1)*1turn))}
+  }
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    
+  }
+  
+  .reveal.reveal-active {
+    opacity: 1;
+    transform: none;
+  }
+  
