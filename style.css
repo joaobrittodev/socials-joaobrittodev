@@ -35,6 +35,13 @@ body {
     border-radius: 50%;
 }
 
+.desc-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+
 h1 {
     margin: 10px 0 0 0;
     font-size: 24px;
